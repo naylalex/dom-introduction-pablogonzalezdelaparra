@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- 
+Laboratorio basado en el ejemplo "Example 1: height and width" publicado en
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples
+
+-->
+
+<head>
+    <title>Manejo de atributos de imágenes (height/width)</title>
+    <!-- LAB: Añade la hoja de estilo my_styles.css -->
+    
+    <script>
+        function init() {
+            // LAB: Actualiza las dimensiones de arrImages
+            var arrImages = new Array(3);
+
+            arrImages[0] = document.getElementById("image1");
+            arrImages[1] = document.getElementById("image2");
+            arrImages[2] = document.getElementById("image3");
+            // LAB: Asigna el valor de arrImages[3] para que corresponda al elemento con id "image4"
+            
+            // LAB: Asigna el valor de arrImages [4] para que corresponde con el elemento con id "image5"
+            
+            // LAB: Asigna el valor de arrImages [5] para que corresponde con el elemento con id "image5"
+            
+
+            var objOutput = document.getElementById("output");
+            var strHtml = "<ul>";
+            strHtml += "<h1>Image summary</h1>";
+            // LAB: Actualiza la definición de strHtml para que se muestre el nombre 
+            //      de la clase de la imagen
+            for (var i = 0; i < arrImages.length; i++) {
+                strHtml += "<li>image" + (i + 1) +
+                    ": height=" + arrImages[i].height +
+                    ", width=" + arrImages[i].width +
+                    ", style.height=" + arrImages[i].style.height +
+                    ", style.width=" + arrImages[i].style.width
+                "<\/li>";
+            }
+
+            strHtml += "<\/ul>";
+
+            objOutput.innerHTML = strHtml;
+        }
+    </script>
+</head>
+
+<body onload="init();">
+    <h1>Raw Images</h1>
+    <p>Image 1: no height, width, or style
+        <img id="image1" src="../img/idwI8mjeIiIZAAAAAAAAAcRQ_w1024h768_c0.jpeg">
+    </p>
+
+    <p>Image 2: height="256", but no style
+        <img id="image2" src="../img/idwI8mjeIiIZAAAAAAAAAcRQ_w1024h768_c0.jpeg" height="256px">
+    </p>
+
+    <p>Image 3: no height, width, but style="height: 512px;"
+        <img id="image3" src="../img/idwI8mjeIiIZAAAAAAAAAcRQ_w1024h768_c0.jpeg" style="height: 512px;">
+    </p>
+
+    <!-- 
+        LAB: Añade un elemento <p> con un elemento <img> anidado para Image 4 considerando:
+            id="image4"
+            src= "http://www.mozilla.org/images/mozilla-banner.gif"
+            class=small_img
+
+    -->
+
+
+    <!-- 
+        LAB: Añade un elemento <p> con un elemento anidado <img> para Image 5 considerando:
+            id="image5"
+            src="http://www.mozilla.org/images/mozilla-banner.gif"
+            class="large_img"
+    -->
+
+
+    <!-- 
+        LAB: Añade un elemento <p> con un elemento anidado <img> para Image 6 considerando:
+            id="image5"
+            src="http://www.mozilla.org/images/mozilla-banner.gif"
+            class="large_img"
+    -->
+
+
+    <div id="output"> </div>
+</body>
+
+</html>

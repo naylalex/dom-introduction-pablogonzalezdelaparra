@@ -1,0 +1,19 @@
+/* LAB: Implementa el estilo .small_img considerando:
+    height: 128px;
+*/
+.small_img {
+    height: 128px;
+}
+/* LAB: Implementa el estilo .medium_img considerando:
+    height: 256px;
+*/
+.medium_img {
+    height: 256px;
+}
+
+/* LAB: Implementa el estilo .large_img considerando:
+    height: 512px;
+*/
+.large_img {
+    height: 512px;
+}
